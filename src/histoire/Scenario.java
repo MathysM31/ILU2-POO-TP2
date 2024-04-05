@@ -48,19 +48,19 @@ public class Scenario {
 		BoundaryAfficherVillage boundaryAfficherVillageois = new BoundaryAfficherVillage(
 				controlAfficherVillage);
 
-		BoundaryPrendreEtal boundaryChercherEtal = new BoundaryPrendreEtal(
-				controlChercherEtal);
+//		BoundaryPrendreEtal boundaryChercherEtal = new BoundaryPrendreEtal(
+//				controlChercherEtal);
 		BoundaryLibererEtal boundaryLibererEtal = new BoundaryLibererEtal(
 				controlLibererEtal);
 		BoundaryAcheterProduit boundaryAcheterProduit = new BoundaryAcheterProduit(
 				controlAcheterProduit);
 		BoundaryAfficherMarche boundaryAfficherMarche = new BoundaryAfficherMarche(
 				controlAfficherMarche);
-		BoundaryLeVillage boundaryLeVillage = new BoundaryLeVillage(
-				boundaryAfficherVillageois, boundaryEmmenager,
-				boundaryChercherEtal, boundaryLibererEtal,
-				boundaryAfficherMarche, boundaryAcheterProduit);
-		boundaryLeVillage.menu();
+////		BoundaryLeVillage boundaryLeVillage = new BoundaryLeVillage(
+////				boundaryAfficherVillageois, boundaryEmmenager,
+////				boundaryChercherEtal, boundaryLibererEtal,
+////				boundaryAfficherMarche, boundaryAcheterProduit);
+//		boundaryLeVillage.menu();
 	}
 
 }

@@ -3,17 +3,20 @@ package frontiere;
 import java.util.Scanner;
 
 import controleur.ControlPrendreEtal;
+import controleur.ControlVerifierIdentite;
 
 public class BoundaryPrendreEtal {
 	private ControlPrendreEtal controlPrendreEtal;
+	private ControlVerifierIdentite controlVerifierIdentite;
 	private Scanner scan = new Scanner(System.in);
 
-	public BoundaryPrendreEtal(ControlPrendreEtal controlChercherEtal) {
+	public BoundaryPrendreEtal(ControlPrendreEtal controlChercherEtal,ControlVerifierIdentite controlVerif) {
 		this.controlPrendreEtal = controlChercherEtal;
+		this.controlVerifierIdentite =  controlVerif;
 	}
 
 	public void prendreEtal(String nomVendeur) {
-		boolean nomVendeurConnu = controlPrendreEtal.verifierIdentite(nomVendeur);
+		boolean nomVendeurConnu = controlVerifierIdentite.verifierIdentite(nomVendeur);
 		if (!nomVendeurConnu) {
 			System.out.println("Je suis désolée "+ nomVendeur +" mais il faut être un habitant de notre village pour commencer ici.");
 		} else {

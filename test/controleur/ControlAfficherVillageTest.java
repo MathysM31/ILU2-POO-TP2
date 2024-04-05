@@ -15,7 +15,7 @@ class ControlAfficherVillageTest {
 
 	@BeforeEach
 	void setUp() throws Exception {
-		Village village = new Village("Village de test", 10, 10);
+		Village village = new Village("Village de test", 2, 2);
 		Chef chef = new Chef("Chef", 10, village);
 		village.setChef(chef);
 		control = new ControlAfficherVillage(village);
@@ -36,14 +36,14 @@ class ControlAfficherVillageTest {
 		assertArrayEquals(donneesAttendu, donneesRecu, "OK");
 	}
 
-//	@Test
-//	void testDonnerNomVillage() {
-//		fail("Not yet implemented");
-//	}
-//
-//	@Test
-//	void testDonnerNbEtals() {
-//		fail("Not yet implemented");
-//	}
+	@Test
+	void testDonnerNomVillage() {
+		assertEquals("Village de test", control.donnerNomVillage());
+	}
+
+	@Test
+	void testDonnerNbEtals() {
+		assertEquals(2,control.donnerNbEtals());
+	}
 
 }
