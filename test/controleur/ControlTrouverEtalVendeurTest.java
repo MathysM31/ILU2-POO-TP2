@@ -36,8 +36,8 @@ class ControlTrouverEtalVendeurTest {
 	void testTrouverEtalVendeur() {
 		controlEmmenager.ajouterGaulois("Bonemine", 10);
 		controlPrendreEtal.prendreEtal("Bonemine", "fleurs", 10);
-		
-		
+		assertNotNull(controlTrouverEtalVendeur.trouverEtalVendeur("Bonemine"));
+		assertNull(controlTrouverEtalVendeur.trouverEtalVendeur("Intrus"));
 	}
 
 }
