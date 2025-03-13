@@ -10,7 +10,16 @@ public class BoundaryPrendreEtal {
 	}
 
 	public void prendreEtal(String nomVendeur) {
-		//TODO a completer
+		if (!controlPrendreEtal.verifierIdentite(nomVendeur)) {
+			System.out.println("Je suis désolée "+nomVendeur+" mais il faut être un habitant de notre village pour commencer ici.");			
+		} else {
+			System.out.println("Bonjour "+ nomVendeur +", je vais regarder si je peux vous trouvez un etal.");
+			if (!controlPrendreEtal.resteEtals()) {
+				System.out.println("Désolée "+nomVendeur+" je n'ai plus d'étal qui ne soit déjà occupé.");
+			} else {
+				installerVendeur(nomVendeur);
+			}
+		}
 	}
 
 	private void installerVendeur(String nomVendeur) {
